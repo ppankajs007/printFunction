@@ -1,12 +1,14 @@
 function printData_div(){
-	  $('.pagination').hide();
-	  $('.dataTables_info').hide();
-	  $('.dataTables_length').hide();
-	  $('.dataTables_filter').hide();
-	  $('.hidde').hide();
-	  $('.btn-group').hide();
+	
+// hide data if you no need
+   $('.pagination').hide();
+   $('.dataTables_info').hide();
+   $('.dataTables_length').hide();
+   $('.dataTables_filter').hide();
+   $('.hidde').hide();
+   $('.btn-group').hide();
     // add div who's print data start
-		var divToPrint=document.getElementById("print_div_content_div");
+    var divToPrint=document.getElementById("print_div_content_div");
     var newWin=window.open('','Print-Window');
 		newWin.document.open();
     newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
